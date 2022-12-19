@@ -1,4 +1,4 @@
-package com.demoqa;
+package com.demoqa.tests;
 
 
 import com.codeborne.selenide.Configuration;
@@ -12,7 +12,7 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 
-public class PracticeForm {
+public class RegistrationFormTests {
 
     @BeforeAll
     static void setup() {
@@ -22,12 +22,6 @@ public class PracticeForm {
     }
     @Test
     void fillFormTest() {
-//        String firstName = "Bella";
-//        String lastName = "Hadid";
-//        String email = "test@mail.com";
-//        String mobileNumber = "77072999999";
-//        String subjects = "History";
-//        String address  = "Astana, test address";
         open("/automation-practice-form");
 
         executeJavaScript("$('footer').remove()");
@@ -36,7 +30,6 @@ public class PracticeForm {
         $("#firstName").setValue("Mira");
         $("#lastName").setValue("Suleimenova");
         $("#userEmail").setValue("test@mail.com");
-//        $(byText("Female")).click();
         $("#genterWrapper").$(byText("Female")).click();
         $("#userNumber").setValue("77072999999");
         $("#dateOfBirth-wrapper").click();
